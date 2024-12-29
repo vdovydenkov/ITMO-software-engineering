@@ -1,0 +1,14 @@
+﻿@startuml
+actor User
+participant "Игровой сервер" as Server
+actor Someone
+
+User -> Server: Запрос списка онлайн-пользователей
+Server -> User: Список онлайн-пользователей
+
+User -> Server: Отправка сообщения
+Server -> Someone: Пересылка сообщения
+Someone -> Server: Ответ
+Server -> User: Пересылка ответа
+
+@enduml
