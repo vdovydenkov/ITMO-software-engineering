@@ -63,7 +63,7 @@ User "1" <>-- "1" Direction
 User "1" <>-- "1" Point
 
 Radar "1" --> "*" Obstacle
-Radar "1" <>-- "1" Direction
+Radar "1" o-- "1" Direction
 
 Obstacle <|-- StaticObstacle
 Obstacle <|-- MovingObstacle
