@@ -58,11 +58,20 @@ enum ObstacleType {
     Moving
 }
 
-User "1" --> "1" Radar
+User "1" <>-- "1" Radar
+User "1" <>-- "1" Direction
+User "1" <>-- "1" Point
+
 Radar "1" --> "*" Obstacle
+Radar "1" <>-- "1" Direction
+
 Obstacle <|-- StaticObstacle
 Obstacle <|-- MovingObstacle
-Obstacle "1" --> "1" Sound
-MovingObstacle "1" --> "1" Trajectory
+
+Obstacle "1" <>-- "1" Sound
+Obstacle "1" <>-- "1" Polygon
+
+MovingObstacle "1" <>-- "1" Trajectory
+MovingObstacle "1" <>-- "1" Direction
 
 @enduml
